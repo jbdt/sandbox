@@ -155,14 +155,35 @@ h2 { margin-top: 0; }
     margin-top: 20px;
 }
 
-.tm-list-item-2 { align-items: flex-start; }
-
-.tm-list-item-img {
+.tm-image-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
     margin-right: 20px;
+}
+
+.tm-static-image, .tm-animated-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 160px;
     height: 160px;
     background-color: #450bb7;
 }
+
+.tm-animated-image {
+    opacity: 0;
+}
+
+.tm-image-container:hover .tm-animated-image {
+    opacity: 1;
+}
+
+.tm-image-container:hover .tm-static-image {
+    opacity: 0;
+}
+
+.tm-list-item-2 { align-items: flex-start; }
 
 .tm-list-item-img-big {
     margin-right: 25px;
